@@ -1,0 +1,42 @@
+name: Lyra API FinOps
+description: Lyra (Derive) does not charge a monetary subscription fee for API access. All costs are incurred on-chain as trading fees applied to executed options and perpetuals trades. Fee rates follow a maker/taker schedule that decreases with higher trading volume, incentivizing active traders and liquidity providers with rebates.
+url: https://docs.derive.xyz/
+costs:
+  - name: API Access Cost
+    description: There is no direct charge for accessing the Lyra/Derive REST or WebSocket APIs. Public endpoints are completely free. Private endpoints require wallet authentication but carry no subscription cost.
+    amount: 0
+    currency: USD
+    period: None
+    type: Subscription
+  - name: Options Taker Fee
+    description: Fee charged to market takers (order fillers) on options trades. Fees are taken in the settlement currency and decrease at higher volume tiers. Active traders can earn USDC, OP, and DRV rewards that offset fees.
+    type: Transaction
+    currency: USDC (or settlement token)
+    variableByVolume: true
+    documentation: https://docs.derive.xyz/docs/fees
+  - name: Options Maker Fee / Rebate
+    description: Fee or rebate applied to market makers (liquidity providers) on options trades. High-volume makers may receive net rebates, effectively earning fees for providing liquidity.
+    type: Transaction
+    currency: USDC (or settlement token)
+    variableByVolume: true
+    canBeNegative: true
+    documentation: https://docs.derive.xyz/docs/fees
+  - name: Perpetuals Taker Fee
+    description: Fee charged to takers on perpetual futures trades, following a separate maker/taker schedule from options.
+    type: Transaction
+    currency: USDC
+    variableByVolume: true
+    documentation: https://docs.derive.xyz/docs/fees
+  - name: Gas / On-Chain Settlement Cost
+    description: Lyra operates as an OP Stack rollup (Chain ID 957) with settlement on Ethereum. Users pay minimal L2 gas for on-chain operations such as deposits, withdrawals, and settlement. The rollup model significantly reduces gas costs compared to Ethereum mainnet.
+    type: Gas
+    currency: ETH
+    blockchain: Derive Chain (OP Stack, Chain ID 957)
+    rpc: https://rpc.lyra.finance
+    documentation: https://docs.derive.xyz/docs/lyra-chain
+optimization:
+  - tip: Use WebSocket subscriptions instead of REST polling to reduce request volume and avoid rate limiting at no additional cost.
+  - tip: Provide liquidity as a maker to earn rebates that offset taker fees paid on other trades.
+  - tip: Participate in institutional trading rewards programs (USDC, OP, DRV) to reduce net trading costs.
+  - tip: Use session keys rather than signing each request with the primary wallet key to reduce operational overhead.
+  - tip: Batch orders where possible using TWAP or multi-leg RFQ functionality to minimize per-trade fee incidence.

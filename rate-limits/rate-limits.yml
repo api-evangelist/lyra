@@ -1,0 +1,24 @@
+name: Lyra API Rate Limits
+description: Lyra (Derive) applies rate limits to both public and private REST and WebSocket API endpoints. The specific numeric thresholds are documented in the API reference under rate limits and protocol constants. Public endpoints allow unauthenticated bulk market data queries; private endpoints are limited per session key and wallet address.
+url: https://docs.derive.xyz/reference/rate-limits
+rateLimits:
+  - name: Public Endpoint Rate Limit
+    description: Unauthenticated requests to public REST endpoints are subject to per-IP rate limiting. The documentation recommends using WebSocket subscriptions for high-frequency market data instead of polling REST endpoints.
+    type: Public REST
+    scope: Per IP address
+    recommendation: Use WebSocket subscriptions (e.g., ticker.<instrument_name>.<interval>) for real-time data instead of polling.
+    documentation: https://docs.derive.xyz/reference/rate-limits
+  - name: Private Endpoint Rate Limit
+    description: Authenticated requests to private endpoints are rate-limited per session key and wallet. Exceeding limits will result in request rejection until the window resets.
+    type: Private REST
+    scope: Per session key / wallet
+    documentation: https://docs.derive.xyz/reference/rate-limits
+  - name: WebSocket Subscription Rate Limit
+    description: WebSocket connections have limits on the number of concurrent subscriptions and message throughput. The platform supports up to 20 million TPS at the orderbook level but enforces limits at the API consumer level.
+    type: WebSocket
+    scope: Per connection
+    documentation: https://docs.derive.xyz/reference/rate-limits
+notes:
+  - Specific numeric rate limit values (requests per second/minute) are defined in the Derive protocol constants documentation at https://docs.derive.xyz/reference/rate-limits
+  - For high-frequency trading and market making, Derive offers white-glove service with custom limits — contact via Discord or the institutional team
+  - Session keys expire and must be refreshed; expired session keys will cause authentication failures rather than rate limit errors

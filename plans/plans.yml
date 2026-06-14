@@ -1,0 +1,35 @@
+name: Lyra API Plans
+description: Lyra (Derive) provides open public API access for market data with no registration required. Private endpoints for trading require a connected wallet with signed session keys. There are no formal tiered subscription plans; access levels are determined by on-chain wallet activity and trading volume, which affects fee rates.
+plans:
+  - name: Public API Access
+    description: Free, unauthenticated access to all public REST and WebSocket endpoints for querying market data, instruments, tickers, options boards, implied volatility curves, and settlement history. No API key or registration required.
+    url: https://docs.derive.xyz/
+    free: true
+    authentication: None
+    rateLimits: https://docs.derive.xyz/reference/rate-limits
+    endpoints:
+      - GET /public/get_instruments
+      - GET /public/get_tickers
+      - GET /public/get_ticker
+      - GET /public/get_time
+      - GET /public/get_option_settlement_history
+      - GET /public/get_spot_feed_history
+      - GET /public/get_index_chart_data
+      - GET /public/get_tradingview_chart_data
+  - name: Authenticated Trading API
+    description: Full access to private REST and WebSocket API endpoints for submitting orders, managing positions, transferring collateral, accessing account history, and RFQ functionality. Requires a connected Ethereum wallet with signed session keys. Trading fees apply on a maker/taker schedule that decreases with volume.
+    url: https://docs.derive.xyz/
+    free: false
+    authentication: Wallet signature (session key)
+    rateLimits: https://docs.derive.xyz/reference/rate-limits
+    notes: No monetary subscription fee; authentication is via cryptographic wallet signature. Trading fees are charged per transaction on-chain.
+    endpoints:
+      - POST /private/create_order
+      - POST /private/cancel
+      - POST /private/cancel_all
+      - POST /private/get_order_history
+      - POST /private/get_subaccount_value_history
+      - POST /private/transfer_collateral
+      - POST /private/get_positions
+      - POST /private/create_rfq
+      - POST /private/get_margin
