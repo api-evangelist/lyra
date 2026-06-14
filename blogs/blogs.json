@@ -1,0 +1,48 @@
+{
+  "blogUrl": "https://insights.derive.xyz/",
+  "lastFetched": "2026-06-14",
+  "posts": [
+    {
+      "title": "Gold-i MatrixNET integrates Derive",
+      "url": "https://insights.derive.xyz/gold-i-matrixnet-integrates-derive/",
+      "date": "2026-05-28",
+      "description": "Gold-i offers clients access to Derive.xyz through its MatrixNET liquidity platform."
+    },
+    {
+      "title": "Your Options Strategy Looks Right",
+      "url": "https://insights.derive.xyz/your-options-strategy-looks-right/",
+      "date": "2026-04-18",
+      "description": "Educational course content on options trading strategies."
+    },
+    {
+      "title": "Making Onchain Options Work for Institutions",
+      "url": "https://insights.derive.xyz/making-onchain-options-work-for-institutions/",
+      "date": "2026-03-18",
+      "description": "Guidance for institutional participation in decentralized options markets."
+    },
+    {
+      "title": "SOL on Derive",
+      "url": "https://insights.derive.xyz/sol-on-derive/",
+      "date": "2026-03-16",
+      "description": "Announcement of Solana options availability on the Derive platform."
+    },
+    {
+      "title": "Builder Codes",
+      "url": "https://insights.derive.xyz/builder-codes/",
+      "date": "2026-02-10",
+      "description": "Developer incentive program announcement for builders integrating with Derive."
+    },
+    {
+      "title": "Variant Invests in Derive to Build the Volatility Layer Onchain",
+      "url": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
+      "date": "2026-02-03",
+      "description": "Venture capital investment announcement supporting Derive's onchain volatility infrastructure."
+    },
+    {
+      "title": "Derive and Strands launch off-exchange custody for institutional derivatives trading, onchain",
+      "url": "https://insights.derive.xyz/derive-and-strands-launch-off-exchange-custody-for-institutional-derivatives-trading-onchain/",
+      "date": "2026-01-27",
+      "description": "Partnership enabling institutional off-exchange custody solutions for onchain derivatives."
+    }
+  ]
+}
