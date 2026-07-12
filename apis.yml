@@ -81,6 +81,8 @@ apis:
       - name: API Version
         value: v2.2
 common:
+  - type: DomainSecurity
+    url: security/lyra-domain-security.yml
   - type: Documentation
     url: https://docs.derive.xyz/
   - type: GitHubOrganization
