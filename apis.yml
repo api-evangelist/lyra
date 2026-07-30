@@ -1,6 +1,18 @@
 name: Lyra
 description: Lyra (now Derive) is an institutional-grade options AMM protocol built on Ethereum, offering REST and WebSocket APIs for querying options boards, strike prices, implied volatility, trading positions, and liquidity pool analytics. The platform provides onchain options and perpetual futures trading with TradFi-level speed via an OP Stack rollup (Chain ID 957).
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lyra.png
 url: https://raw.githubusercontent.com/api-evangelist/lyra/refs/heads/main/apis.yml
 created: '2026-06-14'
 modified: '2026-06-14'
