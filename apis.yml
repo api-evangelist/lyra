@@ -56,6 +56,13 @@ apis:
     baseURL: https://api.lyra.finance
     tags:
       - Options Trading
+      - Order
+      - Positions
+      - Collateral
+      - RFQ
+      - Margin
+    tags_raw:
+      - Options Trading
       - Orders
       - Positions
       - Collateral
@@ -78,6 +85,12 @@ apis:
     humanURL: https://docs.derive.xyz/
     baseURL: wss://api.lyra.finance
     tags:
+      - WebSocket
+      - Real-Time
+      - Market Data
+      - Streaming
+      - Subscription
+    tags_raw:
       - WebSocket
       - Real-Time
       - Market Data
