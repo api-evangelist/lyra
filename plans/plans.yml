@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Lyra API Plans
 description: Lyra (Derive) provides open public API access for market data with no registration required. Private endpoints for trading require a connected wallet with signed session keys. There are no formal tiered subscription plans; access levels are determined by on-chain wallet activity and trading volume, which affects fee rates.
 plans:

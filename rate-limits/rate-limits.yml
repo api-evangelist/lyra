@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Lyra API Rate Limits
 description: Lyra (Derive) applies rate limits to both public and private REST and WebSocket API endpoints. The specific numeric thresholds are documented in the API reference under rate limits and protocol constants. Public endpoints allow unauthenticated bulk market data queries; private endpoints are limited per session key and wallet address.
 url: https://docs.derive.xyz/reference/rate-limits
