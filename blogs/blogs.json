@@ -9,6 +9,13 @@
       "method": "discovered"
     },
     {
+      "source": "https://insights.derive.xyz/rss/",
+      "feed_url": "https://insights.derive.xyz/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://insights.derive.xyz/feed/",
       "feed_url": "https://insights.derive.xyz/feed/",
       "title": "",
@@ -23,7 +30,7 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-10-10T13:15:00Z",
+  "fetched": "2026-10-17T14:53:57Z",
   "post_count": 29,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
