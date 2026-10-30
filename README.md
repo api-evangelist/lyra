@@ -64,37 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lyra (now operating as Derive) is an institutional-grade options AMM protocol built on Ethereum. It provides onchain options and perpetual futures trading with TradFi-level speed via an OP Stack rollup (Chain ID 957, RPC: rpc.lyra.finance).
+Lyra (now Derive) is an institutional-grade options AMM protocol built on Ethereum, offering REST and WebSocket APIs for querying options boards, strike prices, implied volatility, trading positions, and liquidity pool analytics. The platform provides onchain options and perpetual futures trading with TradFi-level speed via an OP Stack rollup (Chain ID 957).
 
-## APIs
+**Areas:** Options · AMM · DeFi · Derivatives · Implied Volatility · Perpetuals · Cryptocurrency · Finance
 
-- **Public REST API** — Market data, instruments, tickers, options boards, implied volatility, and settlement history. No authentication required. Base URL: `https://api.lyra.finance`
-- **Private REST API** — Order management, position tracking, collateral transfers, RFQ handling, and margin calculations. Requires wallet-signed session key authentication.
-- **WebSocket API** — Real-time streaming of order books, tickers, and account events. Base URL: `wss://api.lyra.finance`
+## Lyra on APIs.io
 
-## Key Endpoints
+Everything profiled for Lyra is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lyra/](https://apis.io/providers/lyra/)** — or go straight to one of the APIs or properties below.
 
-| Endpoint | Description |
+### APIs (3)
+
+- [Lyra Public REST API](https://apis.io/apis/lyra/lyra-public-rest-api/) — Public REST API endpoints for querying market data, instruments, tickers, options boards, implied volatility, settlement history, and liquidity pool…
+- [Lyra Private REST API](https://apis.io/apis/lyra/lyra-private-rest-api/) — Authenticated REST API endpoints for managing subaccounts, submitting and cancelling orders, transferring collateral and positions, accessing order history,…
+- [Lyra WebSocket API](https://apis.io/apis/lyra/lyra-websocket-api/) — WebSocket API for real-time streaming of market data, order book updates, ticker subscriptions, and private account notifications. Authentication uses…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lyra Domain Security](https://apis.io/security/lyra/lyra-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/lyra/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/lyra/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/lyra/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.derive.xyz/)
+- [Documentation](https://docs.derive.xyz/)
+- [Blog](https://insights.derive.xyz/)
+- [Terms of service](https://derive.xyz/terms)
+- [GitHub](https://github.com/derivexyz)
+- [Status](https://status.derive.xyz)
+
+## API Evangelist rating
+
+**Kin Score 19.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `POST /public/get_instruments` | List all instruments by currency and type (option, perp, erc20) |
-| `POST /public/get_tickers` | Bulk ticker data with bid/ask spreads and statistics |
-| `POST /public/get_ticker` | Single instrument ticker with IV and market data |
-| `POST /public/get_option_settlement_history` | Expired options settlement records |
-| `POST /public/get_time` | Server time synchronization |
-| `POST /private/create_order` | Submit options or perp orders |
-| `POST /private/cancel` | Cancel open orders |
-| `POST /private/get_order_history` | Retrieve historical orders |
-| `POST /private/get_positions` | Current open positions |
+| Discoverability | 71.4 |
+| Contract quality | 24.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 17.9 |
+| Access clarity | 5.3 |
 
-## Authentication
+**Agent readiness 18.0** — agent-aware
 
-Public endpoints require no authentication. Private endpoints use cryptographic session keys — callers sign a timestamp with their Ethereum wallet private key (or a delegated session key). See the [authentication docs](https://docs.derive.xyz/reference/authentication) for details.
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Resources
+**Regulatory alignment 16.7** — Securities & Market Data
 
-- Developer Docs: https://docs.derive.xyz/
-- GitHub: https://github.com/derivexyz
-- Discord: https://discord.com/invite/derive
-- Block Explorer: https://explorer.lyra.finance
-- Rate Limits: https://docs.derive.xyz/reference/rate-limits
-- Blog: https://insights.derive.xyz/
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lyra/](https://apis.io/providers/lyra/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lyra: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lyra/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
